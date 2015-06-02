@@ -1,0 +1,362 @@
+@charset "shift_jis";
+
+
+
+body {
+	font-family: "メイリオ", Meiryo, "ＭＳ Ｐゴシック", Osaka, "ヒラギノ角ゴ Pro W3", "Hiragino Kaku Gothic Pro";
+	font-size: 75%;
+	line-height: 2;
+	color: #333333;
+	background-color: #525252;
+	margin: 0px;
+	padding: 0px;
+	text-align: center;
+}
+
+h1,h2,h3,h4,h5,p,ul,ol,li,dl,dt,dd,form{
+	margin: 0px;
+	padding: 0px;
+}
+
+ul{
+	list-style-type: none;
+}
+
+img {
+	border: none;
+}
+
+input,textarea,select {
+	font-size: 1em;
+}
+
+form {
+	margin: 0px;
+}
+
+table {
+	border-collapse:collapse;
+	font-size: 100%;
+	border-spacing: 0;
+}
+
+
+
+/*リンク（全般）設定
+---------------------------------------------------------------------------*/
+a {
+	color: #333333;	/*文字色*/
+}
+
+a:hover {
+	color: #4A0001;	/*カーソルオーバー時の文字色*/
+	text-decoration: none;/*カーソルオーバー時に下線を消す設定。残したままがよければこの1行削除する。*/
+}
+
+
+
+/*コンテナー（HPを囲むブロック）
+---------------------------------------------------------------------------*/
+#container {
+	width: 900px;
+	margin-right: auto;
+	margin-left: auto;
+	text-align: left;
+	background-color: #FFFFFF;
+	padding-left: 10px;
+}
+
+/*h1タグ設定*/
+#container h1 {
+	font-size: 10px;	/*文字サイズ*/
+	width: 870px;
+	margin-right: auto;
+	margin-left: auto;
+	font-weight: normal;	/*通常のままだと太字なので、標準にする設定*/
+	text-align: right;		/*右寄せ*/
+	line-height: 25px;
+}
+
+
+
+/*ヘッダー（ロゴやメイン写真、メインメニューなど入っているブロック）
+---------------------------------------------------------------------------*/
+#header {
+	background-image: url(images/header_bg.jpg);	/*背景画像*/
+	background-repeat: no-repeat;
+	height: 560px;
+	width: 870px;
+	margin-right: auto;
+	margin-left: auto;
+}
+
+
+
+/*メインメニュー
+---------------------------------------------------------------------------*/
+ul#menu {
+	padding-top: 100px;
+}
+
+ul#menu img {
+	vertical-align: bottom;
+}
+
+
+
+/*コンテンツ（左右のブロックとフッターメニューを囲むブロック）
+---------------------------------------------------------------------------*/
+#contents {
+	padding-top: 20px;
+}
+
+
+
+
+/*メインコンテンツ（左側ブロック）
+---------------------------------------------------------------------------*/
+#main {
+	float: left;
+	width: 870px;
+	display: inline;
+	margin-left: 16px;
+}
+
+/*h2見出しタグ設定*/
+#main h2 {
+	font-size: 100%;	/*文字サイズ*/
+	color: #FFF;		/*文字色*/
+	padding-left: 10px;
+	border-top: 1px solid #feac33;		/*上部の線幅、線種、色*/
+	border-right: 1px solid #feac33;	/*右側の線幅、線種、色*/
+	border-bottom: 5px solid #4A0001;	/*下部の線幅、線種、色*/
+	border-left: 1px solid #feac33;		/*左側の線幅、線種、色*/
+	background-color: #ff9900;	/*背景色*/
+	background-image: url(images/h2bg.png);	/*背景画像の読み込み*/
+	background-repeat: no-repeat;			/*背景画像をリピートしない*/
+	background-position: right center;		/*背景画像を右側の上下中央に配置*/
+	padding-top: 8px;
+	padding-bottom: 8px;
+        
+}
+
+/*段落タグ設定*/
+#main p {
+	padding: 0.5em 10px 1em;	/*左から、上、左右、下の余白*/
+}
+
+
+
+/*サブコンテンツ（右側ブロック）
+---------------------------------------------------------------------------*/
+#sub {
+	float: right;
+	width: 240px;
+	display: inline;
+	margin-right: 25px;
+}
+
+/*h3見出しタグ設定*/
+#sub h3 {
+	font-size: 100%;	/*文字サイズ*/
+	color: #4A0001;		/*文字色*/
+	background-color: #F90;					/*背景色*/
+	background-image: url(images/h3_bg.gif);	/*背景画像読み込み*/
+	background-repeat: no-repeat;				/*背景画像をリピートさせない設定*/
+	background-position: bottom;				/*背景画像を下部に配置する設定*/
+	text-align: center;	/*センタリング*/
+	border-top: 1px solid #feac33;		/*上部の線幅、線種、色*/
+	border-right: 1px solid #feac33;	/*右側の線幅、線種、色*/
+	border-left: 1px solid #feac33;		/*左側の線幅、線種、色*/
+	padding-top: 8px;
+	padding-bottom: 13px;
+}
+
+/*段落タグ設定*/
+#sub p {
+	padding-top: 0.5em;
+	padding-bottom: 1em;
+}
+
+
+
+/*サイドメニュー設定（右側ブロック内のメニュー）
+---------------------------------------------------------------------------*/
+ul.submenu {
+	margin-bottom: 1em;
+}
+
+ul.submenu li {
+	border-right: 1px solid #feac33;	/*右側の線幅、線種、色*/
+	border-bottom: 1px solid #feac33;	/*下部の線幅、線種、色*/
+	border-left: 1px solid #feac33;		/*左側の線幅、線種、色*/
+}
+
+ul.submenu a {
+	text-decoration: none;	/*リンクテキストに通常入る下線を消す設定*/
+	display: block;
+	width: 228px;
+	padding-left: 10px;
+	color: #4A0001;			/*文字色*/
+	padding-top: 2px;
+	padding-bottom: 2px;
+}
+
+ul.submenu a:hover {
+	background-color: #4A0001;	/*カーソルオーバー時の背景色*/
+	color: #FFFFFF;				/*カーソルオーバー時の文字色*/
+}
+
+
+
+/*フッターメニュー（下部のテキストメニュー）
+---------------------------------------------------------------------------*/
+ul#footermenu {
+	clear: both;
+	width: 100%;
+	text-align: center;	/*センタリング*/
+	padding-top: 30px;
+	padding-bottom: 20px;
+}
+
+ul#footermenu li {
+	display: inline;
+	padding-right: 5px;
+	padding-left: 5px;
+}
+
+
+
+/*フッター（コピーライトなど入っているブロック）
+---------------------------------------------------------------------------*/
+#footer {
+	text-align: center;	/*センタリング*/
+	color: #f5f5f5;		/*文字色*/
+	padding-bottom: 20px;
+	padding-top: 20px;
+}
+
+/*フッター内にリンク設定した場合用*/
+#footer a {
+	color: #F5F5F5;
+}
+
+
+
+/*トップページ内「更新情報・お知らせ」ブロック
+---------------------------------------------------------------------------*/
+#main .new {
+	overflow: auto;
+	height: 150px;			/*ボックスの高さ*/
+	width: 580px;
+	padding-right: 10px;
+	padding-left: 10px;
+}
+
+#main .new dl {
+	clear: left;
+	width: 560px;
+	border-bottom: 1px solid #333333;	/*日付ごとに入る下線の幅、線種、色*/
+	overflow: hidden;
+}
+
+#main .new dt {
+	font-weight: bold;	/*日付を太字に*/
+	float: left;
+	width: 100px;
+}
+
+#main .new dd {
+	float: left;
+	width: 460px;
+}
+
+#main .new dd img {
+	vertical-align: middle;
+}
+
+/*IE6用*/
+*html #main .new dd img {
+	margin-top:0.5em;
+	vertical-align: baseline;
+}
+
+
+
+/*テーブル（menu.htmlとwedding.htmlに使っているテーブル）
+---------------------------------------------------------------------------*/
+.ta1 {
+	width: 600px;
+}
+
+.ta1, .ta1 td, .ta1 th{
+	border: 1px solid #FEAC33;
+}
+
+.ta1 td, .ta1 th{
+	padding: 5px;	/*テーブル内の余白*/
+	line-height: 1.8;
+	vertical-align: top;	/*上によせる設定。この1行を外せば上下中央に配置されます。*/
+}
+
+.ta1 th{
+	background-color: #ffe7c3;	/*左側thタグの背景色*/
+	width: 150px;				/*左側thタグの幅*/
+	text-align: center;			/*センタリング*/
+}
+
+/*上部タイトル部分（「カテゴリタイトル」と入っている部分）*/
+.ta1 th.tamidashi{
+	width: auto;
+	background-color: #F90;	/*背景色*/
+}
+
+/*h3タグ設定*/
+.ta1 h3 {
+	font-size: 120%;	/*文字サイズ*/
+	color: #4A0001;		/*文字色*/
+	margin-bottom: 1em;
+}
+
+/*「おすすめ」マーク設定*/
+.ta1 td.osusume {
+	background-image: url(images/osusume.gif);	/*「おすすめ」画像読み込み*/
+	background-repeat: no-repeat;				/*画像をリピートしない設定*/
+	background-position: right bottom;			/*画像を右下に配置する設定*/
+}
+
+/*段落タグ設定*/
+.ta1 p {
+	padding: 0px !important;
+}
+
+
+
+/*その他
+---------------------------------------------------------------------------*/
+.mb1em {
+	margin-bottom: 1em;
+}
+
+ul.disc {
+	padding: 0.5em 20px 0em 30px;
+	list-style: disc;
+}
+
+.pagetop {
+	text-align: center;
+	clear: both;
+	padding: 2em 0px 0px !important;
+}
+
+.color1 {
+	color: #FF2A00;
+}
+
+.look {
+	background-color: #f0f0f0;
+}
+
+.clear {
+	clear: both;
+}
