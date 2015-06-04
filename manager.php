@@ -1,63 +1,63 @@
 <!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
 <html xmlns="http://www.w3.org/1999/xhtml" xml:lang="ja" lang="ja">
 <head>
-<meta http-equiv="Content-Type" content="text/html; charset=shift_jis" />
+<meta http-equiv="Content-Type" content="text/html; charset=shift-jis" />
 <meta http-equiv="Content-Style-Type" content="text/css" />
 <meta http-equiv="Content-Script-Type" content="text/javascript" />
-<title>GW Top‰æ–Ê</title>
-<meta name="description" content="’†‰Ø—¿—’ÊM”Ì”„ƒTƒCƒg" />
-<meta name="keywords" content="ƒL[ƒ[ƒh‚P,ƒL[ƒ[ƒh‚Q,ƒL[ƒ[ƒh‚R,ƒL[ƒ[ƒh‚S,ƒL[ƒ[ƒh‚T" />
+<title>GW Topï¿½ï¿½ï¿½</title>
+<meta name="description" content="ï¿½ï¿½ï¿½Ø—ï¿½ï¿½ï¿½ï¿½ÊMï¿½Ì”ï¿½ï¿½Tï¿½Cï¿½g" />
+<meta name="keywords" content="ï¿½Lï¿½[ï¿½ï¿½ï¿½[ï¿½hï¿½P,ï¿½Lï¿½[ï¿½ï¿½ï¿½[ï¿½hï¿½Q,ï¿½Lï¿½[ï¿½ï¿½ï¿½[ï¿½hï¿½R,ï¿½Lï¿½[ï¿½ï¿½ï¿½[ï¿½hï¿½S,ï¿½Lï¿½[ï¿½ï¿½ï¿½[ï¿½hï¿½T" />
 <link href="style.css" rel="stylesheet" type="text/css" />
 <script type="text/javascript" src="script.js"></script>
 </head>
 
-ID name ƒWƒƒƒ“ƒ‹ID@‰¿Ši
+ID name ï¿½Wï¿½ï¿½ï¿½ï¿½ï¿½ï¿½IDï¿½@ï¿½ï¿½ï¿½i
 <body >
 <script>
 /**
- * s’Ç‰Á
+ * ï¿½sï¿½Ç‰ï¿½
  */
 function insertRow(id) {
-    // ƒe[ƒuƒ‹æ“¾
+    // ï¿½eï¿½[ï¿½uï¿½ï¿½ï¿½æ“¾
     var table = document.getElementById(id);
-    // s‚ğs––‚É’Ç‰Á
+    // ï¿½sï¿½ï¿½ï¿½sï¿½ï¿½ï¿½É’Ç‰ï¿½
     var row = table.insertRow(-1);
-    // ƒZƒ‹‚Ì‘}“ü
+    // ï¿½Zï¿½ï¿½ï¿½Ì‘}ï¿½ï¿½
     var cell1 = row.insertCell(-1);
     var cell2 = row.insertCell(-1);
     var cell3 = row.insertCell(-1);
-    // ƒ{ƒ^ƒ“—p HTML
-    var button = '<input type="button" value="síœ" onclick="deleteRow(this)" />';
- 
-    // s”æ“¾
+    // ï¿½{ï¿½^ï¿½ï¿½ï¿½p HTML
+    var button = '<input type="button" value="ï¿½sï¿½íœ" onclick="deleteRow(this)" />';
+
+    // ï¿½sï¿½ï¿½ï¿½æ“¾
     var row_len = table.rows.length;
- 
-    // ƒZƒ‹‚Ì“à—e“ü—Í
+
+    // ï¿½Zï¿½ï¿½ï¿½Ì“ï¿½ï¿½eï¿½ï¿½ï¿½ï¿½
     cell1.innerHTML = button;
     cell2.innerHTML = row_len + "-" + 1;
     cell3.innerHTML = row_len + "-" + 2;
 }
- 
+
 /**
- * síœ
+ * ï¿½sï¿½íœ
  */
 function deleteRow(obj) {
-    // íœƒ{ƒ^ƒ“‚ğ‰Ÿ‰º‚³‚ê‚½s‚ğæ“¾
+    // ï¿½íœï¿½{ï¿½^ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ê‚½ï¿½sï¿½ï¿½ï¿½æ“¾
     tr = obj.parentNode.parentNode;
-    // tr‚ÌƒCƒ“ƒfƒbƒNƒX‚ğæ“¾‚µ‚Äs‚ğíœ‚·‚é
+    // trï¿½ÌƒCï¿½ï¿½ï¿½fï¿½bï¿½Nï¿½Xï¿½ï¿½ï¿½æ“¾ï¿½ï¿½ï¿½Äsï¿½ï¿½ï¿½íœï¿½ï¿½ï¿½ï¿½
     tr.parentNode.deleteRow(tr.sectionRowIndex);
 }
- 
+
 /**
- * —ñ’Ç‰Á
+ * ï¿½ï¿½Ç‰ï¿½
  */
 function insertColumn(id) {
-    // ƒe[ƒuƒ‹æ“¾
+    // ï¿½eï¿½[ï¿½uï¿½ï¿½ï¿½æ“¾
     var table = document.getElementById(id);
-    // s”æ“¾
+    // ï¿½sï¿½ï¿½ï¿½æ“¾
     var rows = table.rows.length;
-     
-    // Šes––”ö‚ÉƒZƒ‹‚ğ’Ç‰Á
+
+    // ï¿½eï¿½sï¿½ï¿½ï¿½ï¿½ï¿½ÉƒZï¿½ï¿½ï¿½ï¿½Ç‰ï¿½
     for ( var i = 0; i < rows; i++) {
         var cell = table.rows[i].insertCell(-1);
         var cols = table.rows[i].cells.length;
@@ -67,17 +67,17 @@ function insertColumn(id) {
         cell.innerHTML = (i + 1) + '-' + (cols - 1);
     }
 }
- 
+
 /**
- * —ñíœ
+ * ï¿½ï¿½íœ
  */
 function deleteColumn(id) {
-    // ƒe[ƒuƒ‹æ“¾
+    // ï¿½eï¿½[ï¿½uï¿½ï¿½ï¿½æ“¾
     var table = document.getElementById(id);
-    // s”æ“¾
+    // ï¿½sï¿½ï¿½ï¿½æ“¾
     var rows = table.rows.length;
-     
-    // Šes––‚ÌƒZƒ‹‚ğíœ
+
+    // ï¿½eï¿½sï¿½ï¿½ï¿½ÌƒZï¿½ï¿½ï¿½ï¿½ï¿½íœ
     for ( var i = 0; i < rows; i++) {
         var cols = table.rows[i].cells.length;
         if (cols < 2) {
@@ -87,25 +87,25 @@ function deleteColumn(id) {
     }
 }
 </script>
- 
-<input type="button" value="s’Ç‰Á" onclick="insertRow('sample1_table')" />
-<input type="button" value="—ñ’Ç‰Á" onclick="insertColumn('sample1_table')" />
-<input type="button" value="—ñíœ" onclick="deleteColumn('sample1_table')" />
+
+<input type="button" value="ï¿½sï¿½Ç‰ï¿½" onclick="insertRow('sample1_table')" />
+<input type="button" value="ï¿½ï¿½Ç‰ï¿½" onclick="insertColumn('sample1_table')" />
+<input type="button" value="ï¿½ï¿½íœ" onclick="deleteColumn('sample1_table')" />
 <table id="sample1_table">
     <tr>
-        <td nowrap><input type="button" value="síœ"
+        <td nowrap><input type="button" value="ï¿½sï¿½íœ"
             onclick="deleteRow(this)" /></td>
         <td nowrap>1-1</td>
         <td nowrap>1-2</td>
     </tr>
     <tr>
-        <td nowrap><input type="button" value="síœ"
+        <td nowrap><input type="button" value="ï¿½sï¿½íœ"
             onclick="deleteRow(this)" /></td>
         <td nowrap>2-1</td>
         <td nowrap>2-2</td>
     </tr>
     <tr>
-        <td nowrap><input type="button" value="síœ"
+        <td nowrap><input type="button" value="ï¿½sï¿½íœ"
             onclick="deleteRow(this)" /></td>
         <td nowrap>3-1</td>
         <td nowrap>3-2</td>
@@ -113,12 +113,14 @@ function deleteColumn(id) {
 </table>
 
 
-//¤•i‚Ìƒe[ƒuƒ‹‚ğ•\¦‚·‚é<br><br>
-¤•iID:<INPUT type="text" size="40" name="foodID"><br><br>
-¤•i–¼:<INPUT type="text" size="40" name="foodname"><br><br>
-ƒWƒƒƒ“ƒ‹ID:<INPUT type="text" size="40" name="genreID"><br><br>
-‰¿Ši:<INPUT type="text" size="40" name="price"><br><br>
-<input type="submit" value="’Ç‰Á">
+//ï¿½ï¿½ï¿½iï¿½Ìƒeï¿½[ï¿½uï¿½ï¿½ï¿½ï¿½\ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½<br><br>
+<form action="insert.php" method="post">
+ï¿½ï¿½ï¿½iID:<INPUT type="text" size="40" name="foodID"><br><br>
+ï¿½ï¿½ï¿½iï¿½ï¿½:<INPUT type="text" size="40" name="foodname"><br><br>
+ï¿½Wï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ID:<INPUT type="text" size="40" name="genreID"><br><br>
+ï¿½ï¿½ï¿½i:<INPUT type="text" size="40" name="price"><br><br>
+<input type="submit" value="ï¿½Ç‰ï¿½">
+</form>
 
 </body>
 </html>

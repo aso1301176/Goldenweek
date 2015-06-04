@@ -22,7 +22,7 @@ function insert($id,$name,$password,$phone,$address){
 	// データベースを選択する
 	$sdb = mysql_select_db($db,$link) or die("データベースの選択に失敗しました。");
 
-	$sql = "INSERT INTO `gyouza`.`cos` (`CosID`, `Cosname`, `Coscont`, `point`, `Cosadd`) VALUES ('"+$id + "', '"+$name+"', '"+$phone+"', '0', '"+$address+"');";
+	$sql = "INSERT INTO `cos` (`CosID`, `Cosname`, `Coscont`, `point`, `Cosadd`) VALUES ('"+$id + "', '"+$name+"', '"+$phone+"', '0', '"+$address+"');";
 
 	$result = mysql_query($sql) or die("挿入に失敗しました");
 
@@ -34,6 +34,25 @@ function insert($id,$name,$password,$phone,$address){
 	mysql_close($link) or die("MySQL切断に失敗しました。");
 
 
+
+}
+function insert2($foodID,$foodname,$genre,$price){
+	$url = seturl();
+	$user = setuser();
+	$pass = setpass();
+	$db = setdb();
+	$link = mysql_connect($url,$user,$pass) or die("MySQLへの接続に失敗しました。");
+
+	// データベースを選択する
+	$sdb = mysql_select_db($db,$link) or die("データベースの選択に失敗しました。");
+
+	$sql = "INSERT INTO `item` (`ItemID`, `Itemname`, `GenreID`, `Price`) VALUES ('"+$foodID + "', '"+$foodname+"', '"+$genre+"', ' +$price+ ');";
+
+	$result = mysql_query($sql) or die("挿入に失敗しました");
+
+	mysql_free_result($result);
+
+	mysql_close($link) or die("MySQL切断に失敗しました。");
 
 }
 function quell($id,$password){
@@ -84,12 +103,17 @@ function update($name,$password,$phone,$address){
 
 	$sdb = mysql_select_db($db,$link) or die("データベースの選択に失敗しました。");
 
+	$sql = "UPDATE `item` SET `ItemID` = '6', `Itemname` = 'エビチリ', `GenreID` = '2', `Price` = '108' WHERE `item`.`ItemID` = 1; '\";";
+
+
+
 }
 function delete($itemid){
 	$url = seturl();
 	$user = setuser();
 	$pass = setpass();
 	$db = setdb();
+
 
 
 
