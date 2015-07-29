@@ -1,5 +1,5 @@
 <?php
 require_once 'sql.php';
-insert($id, $name, $pass, $phone, $address);
+insert($_POST('id'), $_POST('name'), $_POST('password'), $_POST('phone'), $_POST('address'));
 
 ?>
